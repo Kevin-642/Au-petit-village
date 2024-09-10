@@ -1,0 +1,34 @@
+.main-container {
+    background: #F9D0A3;
+}
+
+.main-container h2 {
+    display: flex;
+    justify-content: center;
+    color: #DA001E;
+    padding-top: 20px;
+}
+
+.village {
+    display: flex;
+    justify-content: center;
+}
+.main-container img {
+    width: 500px;
+    height: 400px;
+    padding-bottom: 20px;
+}
+
+.presentation p {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width:128px) and (max-width:900px) {
+    .main-container img {
+        width: 100%;
+        height: 300px;
+        padding: 5px;
+    }
+}
+

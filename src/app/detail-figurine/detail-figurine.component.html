@@ -1,0 +1,41 @@
+<div class="main-container">
+    
+    <div *ngIf="figurine" class="card-container">
+    
+    <h2>{{ figurine.name }}</h2>
+
+    <div class="card">
+        <img [src]="figurine.picture" class="card-image">
+        
+            <div class="card-content">
+              <table class="bordered striped">
+                
+                  <tr>
+                    <td>Nom :</td>
+                    <td><strong>{{ figurine.name }}</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Prix :</td>
+                    <td><strong>{{ figurine.price }}</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Description :</td>
+                    <td><strong>{{ figurine.description }}</strong></td>
+                  </tr>
+                  <tr>
+                    <tr>
+                        <td>Détail :</td>
+                        <td><strong>{{ figurine.detail }}</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Dimension :</td>
+                        <td><strong>{{ figurine.dimension }}</strong></td>
+                    </tr>
+              </table>
+             <div class="retour">
+                <a routerLink="/productlist">Retour</a>
+             </div>
+    </div> 
+</div>
+<p *ngIf="!figurine" class="center">Ce gaulois n'est pas au village!</p>
+     

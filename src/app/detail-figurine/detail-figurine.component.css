@@ -1,0 +1,58 @@
+.main-container {
+    background-color: #F9D0A3;
+    margin: 0;
+    padding: 30px;
+}
+
+h2 {
+    color: #DA001E;
+    font-weight: bold;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 700px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card-image {
+    width: 100px;
+}
+
+.retour {
+    cursor: pointer;
+}
+
+.retour a {
+    text-decoration: none;
+    color: #DA001E;
+    font-weight: bolder;
+}
+
+@media screen and (min-width:128px) and (max-width:900px) {
+    .card {
+        display: flex;
+        flex-direction: inherit;
+    }
+
+    .card-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8px;
+
+    }
+    .card .card-content {
+      padding:8px;
+      border-radius:0 0 2px 2px;
+    }
+}

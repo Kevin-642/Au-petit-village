@@ -1,0 +1,40 @@
+<section class="container">
+    <div class="row">
+        <h1 class="center">Nos figurines</h1>
+        <p>Toutes nos figurines sont faites à la main par notre équipe de gaulois.</p>
+        
+        <div class="recherche">
+
+            <label for="search">Rechercher une figurine...</label>
+            <input type="text" class="form-control" id="search"  [(ngModel)]="searchText"
+            placeholder="Nom du personnage ..."/>
+         
+            <label for="search">Trier par :</label>
+            <select class="form-control" id="sorting" [(ngModel)]="sortOrder">
+              <option value="asc">Prix : croissant</option>
+              <option value="desc">Prix : décroissant</option>
+            </select>
+            
+        </div>
+
+        <div *ngFor="let figurine of figurineList | filterByName : searchText | sortByPrice : sortOrder" class="col m5 s7">
+            <div class="card" (click)="goToFigurine(figurine)" figurineBorderCard>
+                <div class="card-image">
+                    <img [src]="figurine.picture" alt="{{ figurine.name }}"/>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h2>{{ figurine.name }}</h2>
+                        <p class="price">{{ figurine.price }} € </p>
+                        <p class="description">{{ figurine.description }}</p>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+

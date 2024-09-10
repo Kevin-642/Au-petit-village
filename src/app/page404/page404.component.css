@@ -1,0 +1,18 @@
+* {
+    background-color: #F9D0A3;
+}
+
+img {
+    padding-top: 20px;
+}
+
+h1 {
+    color: #DA001E;
+}
+
+a {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+    color: #151217;
+}

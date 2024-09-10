@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #F9D0A3;
+
+}
+
+h1 {
+    color: #DA001E;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+}
+
+.card-content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    color: #DA001E;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.description {
+    font-size: small;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.recherche {
+    padding-bottom: 20px;
+}
+
+label {
+    color: #151217;
+}
+
+
+.form-control {
+    background-color: #F9D0A3;
+    border-color: #151217;
+}
+
+@media screen and (min-width:128px) and (max-width:900px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,91 @@
+main {
+    background-color: #F9D0A3;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #DA001E;
+    padding-top: 20px;
+}
+
+.main_container p {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.figurines {
+    display: flex;
+    justify-content: center;
+}
+
+.figurines img {
+    width: 550px;
+    height: 400px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: #DA001E;
+    padding-top: 20px;
+}
+
+.produits p {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+section .container-card{
+    background-color: #F9D0A3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.card{
+    width: 250px;
+    height: 400px;
+}
+.card-title{
+    text-align: center;
+    color: #DA001E;
+}
+
+p{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px 0px 10px;
+}
+
+.description{
+    margin: 0;
+    padding-top: 10px;
+    font-weight: 200;
+}
+
+.card-deck{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+button{
+    background: #FDD90B;
+    color: #151217;
+    border: none;
+    padding: 5px;
+    margin-top: 5px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+button:hover{
+    color: #DA001E;
+}

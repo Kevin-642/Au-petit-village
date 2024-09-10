@@ -1,0 +1,23 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-3">
+                <div class="logo container">
+                    <img routerLink="/" src="./assets/image/logo.jpg" alt="logo au petit village" class="logo">
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-9 text-end">
+                <div class="menu-icon" (click)="openMenu()">
+                        <i class="{{menu_icon}}"></i>
+                </div>
+                <div class="desktop_menu" [class.mobile_menu]="menuValue">
+                    <ul>
+                        <li routerLink="/" (click)="closeMenu()">Accueil</li>
+                        <li routerLink="/about" (click)="closeMenu()">A propos</li>
+                        <li routerLink="/productlist" (click)="closeMenu()">Produits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
