@@ -1,7 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { StandalonePipe } from '@angular/core'; // facultatif mais utile pour clarté
 
 @Pipe({
-  name: 'filterByName'
+  name: 'filterByName',
+  standalone: true
 })
 export class FilterByNamePipe implements PipeTransform {
   transform(FIGURINES: any[], searchText: string): any[] {
@@ -9,10 +11,10 @@ export class FilterByNamePipe implements PipeTransform {
       return FIGURINES;
     }
 
-    searchText = searchText.toLowerCase(); 
+    searchText = searchText.toLowerCase();
 
-    return FIGURINES.filter((Figurine) =>
-      Figurine.name.toLowerCase().includes(searchText)
+    return FIGURINES.filter((figurine) =>
+      figurine.name.toLowerCase().includes(searchText)
     );
   }
 }

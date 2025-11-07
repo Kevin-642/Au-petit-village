@@ -1,36 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { FIGURINES } from './figurine-list';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 import { Figurine } from './figurine';
-import { Router } from '@angular/router';
+import { FIGURINES } from './figurine-list';
+import { FilterByNamePipe } from '../home/filter-by-name-pipe';
+import { SortByPricePipe } from '../home/sort-by-price.pipe';
+import { BorderCardDirective } from './border-card.directive';
 
 @Component({
   selector: 'app-productlist',
-  templateUrl: 'productlist.component.html',
-  styleUrl: 'productlist.component.css'
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    FilterByNamePipe,
+    SortByPricePipe,
+    BorderCardDirective
+  ],
+  templateUrl: './productlist.component.html',
+  styleUrls: ['./productlist.component.css']
 })
-
 export class ProductlistComponent implements OnInit {
   figurineList: Figurine[] = FIGURINES;
-  figurineSelected: Figurine|undefined;
-  searchText = '';
-  FIGURINES: any[] = [];
+  searchText: string = '';
   sortOrder: 'asc' | 'desc' = 'asc';
-
-  constructor(private router: Router) {}
-
-  goToFigurine(figurine: Figurine) {
-    this.router.navigate(['/figurine', figurine.id]);
-  }
+  figurineSelected?: Figurine;
 
   ngOnInit() {
-      console.table(this.figurineList);
-  }
-
-  getFIGURINES(): any[] {
-    return this.FIGURINES;
+    console.table(this.figurineList);
   }
 
   selectFigurine(figurineId: string) {
-    const figurine: Figurine|undefined = this.figurineList.find(figurine => figurine.id == +figurineId);
+    this.figurineSelected = this.figurineList.find(f => f.id === +figurineId);
   }
 }

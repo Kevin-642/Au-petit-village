@@ -21,7 +21,7 @@ ngOnInit() {
   const figurineId: string|null = this.route.snapshot.paramMap.get('id');
   if(figurineId) {
     this.figurine = this.figurineList.find(figurine => figurine.id == +figurineId)
-   } 
+   }
   }
 
 }

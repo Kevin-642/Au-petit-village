@@ -4,8 +4,10 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine"
-    ]
+      "jasmine",
+      "jest"
+    ],
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "src/**/*.spec.ts",
